@@ -1,0 +1,39 @@
+// basics
+@import "/src/style/base/variables";
+@import "/src/style/base/mixins";
+@import "/src/style/base/helpers";
+@import "/src/style/base/font-face";
+@import "/src/style/base/globals";
+
+//pages
+@import "/src/style/pages/home";
+
+//components
+@import "/src/style/components/footer";
+@import "/src/style/components/loader";
+
+body {
+  background-color: $background1;
+  color: $white;
+  margin: 0;
+}
+
+.main {
+  padding: 10px;
+  min-height: 100vh;
+  overflow-y: scroll;
+  direction: rtl;
+  text-align: right;
+}
+
+.policy {
+  max-width: 1400px;
+
+  h2 {
+    color: $yellow;
+  }
+
+  h1 {
+    color: $red;
+  }
+}

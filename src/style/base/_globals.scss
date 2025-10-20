@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  font-family: roboto, Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+}   
+
+button,
+input,
+textarea,
+select {
+  border: none
+}
+
+button{
+  @include button;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.example {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+input[type='range'] {
+  overflow: hidden;
+  width: 130px;
+  -webkit-appearance: none;
+  height: 10px;
+  border-radius: 10px;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  height: 10px;
+  -webkit-appearance: none;
+  color: black;
+  margin-top: -1px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  width: 12px;
+  -webkit-appearance: none;
+  height: 30px;
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+}
+
+select {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  padding: 0;
+}

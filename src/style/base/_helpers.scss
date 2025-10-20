@@ -1,0 +1,92 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.rtl {
+    direction: rtl;
+}
+
+.ltr {
+    direction: ltr;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.mirror {
+    transform: scaleX(-1);
+}
+
+.cancel-animation {
+    animation: none !important;
+}
+
+.outline-bolden {
+    outline: 2px solid rgb(255, 255, 255);
+}
+
+.non-appear {
+    display: none;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    background-color: black;
+    z-index: 10;
+}
+
+.blur {
+    opacity: 0.8;
+}
+
+.no-scroll {
+    overflow-y: hidden;
+    height: 100vh;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.relative {
+    position: relative;
+}
+
+.undecorate {
+    text-decoration: none;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
