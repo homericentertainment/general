@@ -17,7 +17,9 @@ function App() {
       path: '/',
       element: <section>
         <div className='main'>
-          <Suspense fallback={<Loader />}>
+          <Suspense fallback={<div className='screen-center'>
+            <Loader />
+          </div> }>
             <Outlet />
           </Suspense>
         </div>
@@ -27,7 +29,7 @@ function App() {
       children: [
         { index: true, element: <Home /> },
         { path: '/', element: <Home /> },
-        { path: '/treasure-hunt', element: <TreasureHunt /> },
+        { path: 'treasure-hunt', element: <TreasureHunt /> },
       ],
     },
   ])
