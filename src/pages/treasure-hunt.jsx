@@ -1,4 +1,10 @@
+import {useEffect} from 'react'
+
 export default function TreasureHunt() {
+    useEffect(() => {
+        document.title = 'סולטיז | חפש את המטמון'
+    }, [])
+
     return <div className="policy">
         <h1>תקנון המשחק – חפש את המטמון</h1>
         <p>השתתפות במשחק מהווה הסכמה לכללים המפורטים להלן.</p>
