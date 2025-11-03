@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
 import { ErrorPage } from './pages/error.jsx'
 import Home from './pages/home.jsx'
 import TreasureHunt from './pages/treasure-hunt.jsx'
+import SalstarsBot from './pages/salstars-bot.jsx'
 
 // components
 import { Footer } from './components/footer.jsx'
@@ -22,6 +23,7 @@ function App() {
       errorElement: <ErrorPage />,
       children: [
         { path: 'treasure-hunt', element: <TreasureHunt /> },
+        { path: 'salstars-bot', element: <SalstarsBot /> },
         { path: '/', element: <Home /> },
       ],
     },
