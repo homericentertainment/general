@@ -5,6 +5,7 @@ import { ErrorPage } from './pages/error.jsx'
 import Home from './pages/home.jsx'
 import TreasureHunt from './pages/treasure-hunt.jsx'
 import SalstarsBot from './pages/salstars-bot.jsx'
+import Bots from './pages/bots.jsx'
 
 // components
 import { Footer } from './components/footer.jsx'
@@ -24,6 +25,7 @@ function App() {
       children: [
         { path: 'treasure-hunt', element: <TreasureHunt /> },
         { path: 'salstars-bot', element: <SalstarsBot /> },
+        { path: 'bots', element: <Bots /> },
         { path: '/', element: <Home /> },
       ],
     },
