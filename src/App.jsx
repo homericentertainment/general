@@ -6,6 +6,7 @@ import Home from './pages/home.jsx'
 import TreasureHunt from './pages/treasure-hunt.jsx'
 import SalstarsBot from './pages/salstars-bot.jsx'
 import Bots from './pages/bots.jsx'
+import Movie from './pages/movie.jsx'
 
 // components
 import { Footer } from './components/footer.jsx'
@@ -26,6 +27,7 @@ function App() {
         { path: 'treasure-hunt', element: <TreasureHunt /> },
         { path: 'salstars-bot', element: <SalstarsBot /> },
         { path: 'bots', element: <Bots /> },
+        { path: 'movie', element: <Movie /> },
         { path: '/', element: <Home /> },
       ],
     },
