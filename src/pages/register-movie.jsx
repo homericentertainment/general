@@ -47,17 +47,7 @@ export default function RegisterMovie() {
 נתראה שם!`
         navigator.clipboard.writeText(message)
         dispatch(setUpperPopup('copied'))
-        if (openWhatsApp) openWhatsAppApp()
-    }
-
-    function openWhatsAppApp() {
-        const appUrl = "whatsapp://"
-        const fallbackUrl = "https://wa.me/"
-        window.location.href = appUrl
-
-        setTimeout(() => {
-            window.location.href = fallbackUrl
-        }, 400)
+        if (openWhatsApp) window.location.href = "whatsapp://app"
     }
 
     function isMobile() {
@@ -112,7 +102,7 @@ export default function RegisterMovie() {
                         value={formData.code}
                         onChange={handleChange}
                         required
-                        placeholder="סולסטארס-1234"
+                        placeholder="סולסטארס1234"
                     />
                 </div>
 
