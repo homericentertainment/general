@@ -1,8 +1,8 @@
 import Axios from 'axios'
 
 const BASE_URL = process.env.NODE_ENV === 'production' ?
-    'https://api.example.com/'
-    : 'http://localhost:3030/'
+    'https://server.pikme.tv/'
+    : 'http://localhost:3029/'
 
 
 var axios = Axios.create({
@@ -29,7 +29,7 @@ async function serverCall(endpoint, method = 'GET', data = null, signal = null) 
         const res = await axios({
             url: `${BASE_URL}${endpoint}`,
             method,
-            data: method === 'GET' ? data : null,
+            data: method !== 'GET' ? data : null,
             params: method === 'GET' ? data : null,
             signal
         })

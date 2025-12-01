@@ -7,6 +7,7 @@ import TreasureHunt from './pages/treasure-hunt.jsx'
 import SalstarsBot from './pages/salstars-bot.jsx'
 import Bots from './pages/bots.jsx'
 import Movie from './pages/movie.jsx'
+import RegisterMovie from './pages/register-movie.jsx'
 
 // components
 import { Footer } from './components/footer.jsx'
@@ -18,7 +19,7 @@ function App() {
       path: '/',
       element: <section>
         <div className='main'>
-            <Outlet />
+          <Outlet />
         </div>
         <Footer />
       </section>,
@@ -28,6 +29,7 @@ function App() {
         { path: 'salstars-bot', element: <SalstarsBot /> },
         { path: 'bots', element: <Bots /> },
         { path: 'movie', element: <Movie /> },
+        { path: 'register-movie', element: <RegisterMovie /> },
         { path: '/', element: <Home /> },
       ],
     },
