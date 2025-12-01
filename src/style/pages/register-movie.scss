@@ -1,6 +1,7 @@
 .r-wrapper {
     @include flex(0, center, center, column);
     height: calc(100vh);
+    padding: 10px;
 
     h1 {
         color: $red;
@@ -20,7 +21,7 @@
 
 .user-form {
     background: $black;
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
     color: $white;
     width: 100%;
@@ -55,13 +56,4 @@
         border-radius: 4px;
         cursor: pointer;
     }
-}
-
-.success-message {
-    background: $black;
-    color: $yellow;
-    padding: 20px;
-    border-radius: 8px;
-    width: 300px;
-    text-align: center;
 }

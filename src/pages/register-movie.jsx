@@ -69,6 +69,7 @@ export default function RegisterMovie() {
     if (submitted)
         return <div className="r-wrapper">
             <h1>הטופס נשלח בהצלחה!</h1>
+            <p>שלח את הקישור לחברים, פנק אותם בהנחה ואולי תזכה להשתתף בסרט עם כוכבי הסולטיז!</p>
             <button onClick={() => share(false)}>העתק לינק</button>
             {isMobile() && <button style={{ backgroundColor: '#25D366' }} onClick={() => share(true)}>העתק ושתף בוואטסאפ</button>}
         </div>
