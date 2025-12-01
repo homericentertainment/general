@@ -47,7 +47,7 @@ export default function RegisterMovie() {
 נתראה שם!`
         navigator.clipboard.writeText(message)
         dispatch(setUpperPopup('copied'))
-        if (openWhatsApp) window.location.href = "whatsapp://app"
+        if (openWhatsApp) window.open('whatsapp://app', "_self")
     }
 
     function isMobile() {
@@ -106,6 +106,7 @@ export default function RegisterMovie() {
                     />
                 </div>
 
+                <p className="policy-link">שליחת המידע מהווה הסכמה <span onClick={() => window.open('https://policies.thesaltiz.com/movie', '_blank')}>לתקנון</span></p>
                 <button type="submit" className="submit-btn">
                     שליחה
                 </button>

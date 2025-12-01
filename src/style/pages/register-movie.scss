@@ -56,4 +56,16 @@
         border-radius: 4px;
         cursor: pointer;
     }
+
+    .policy-link {
+        font-size: 14px;
+        color: $white;
+        margin-bottom: 0px;
+
+        span {
+            color: $red;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
 }
