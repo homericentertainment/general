@@ -11,6 +11,7 @@ import RegisterMovie from './pages/register-movie.jsx'
 
 // components
 import { Footer } from './components/footer.jsx'
+import { UpperPopup } from './components/upper-popup.jsx'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
       path: '/',
       element: <section>
         <div className='main'>
+          <UpperPopup />
           <Outlet />
         </div>
         <Footer />

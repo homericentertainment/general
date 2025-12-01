@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react"
 import { server } from '../services/http'
+import { useDispatch } from "react-redux"
+import { setUpperPopup } from "../store/reducers/general"
 const link = 'https://discover.ticketmaster.co.il/event/sol25'
 
 export default function RegisterMovie() {
+    const dispatch = useDispatch()
     const [formData, setFormData] = useState({
         name: "",
         phone: "",
@@ -35,7 +38,7 @@ export default function RegisterMovie() {
         }
     }
 
-    const share = () => {
+    const share = (openWhatsApp = false) => {
         const message = `
 היי לכולם!
 הצטרפו אלי במופע הכי מטורף שהסולטיז עשו עד היום!
@@ -43,12 +46,31 @@ export default function RegisterMovie() {
 קוד הנחה : ${formData.code}
 נתראה שם!`
         navigator.clipboard.writeText(message)
+        dispatch(setUpperPopup('copied'))
+        if (openWhatsApp) openWhatsAppApp()
+    }
+
+    function openWhatsAppApp() {
+        const appUrl = "whatsapp://"
+        const fallbackUrl = "https://wa.me/"
+        window.location.href = appUrl
+
+        setTimeout(() => {
+            window.location.href = fallbackUrl
+        }, 400)
+    }
+
+    function isMobile() {
+        return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(
+            navigator.userAgent
+        )
     }
 
     if (submitted)
         return <div className="r-wrapper">
             <h1>הטופס נשלח בהצלחה!</h1>
-            <button onClick={share}>לשיתוף הלינק עם חברים</button>
+            <button onClick={() => share(false)}>העתק לינק</button>
+            {isMobile() && <button style={{ backgroundColor: '#25D366' }} onClick={() => share(true)}>העתק ושתף בוואטסאפ</button>}
         </div>
 
     return (
@@ -89,6 +111,7 @@ export default function RegisterMovie() {
                         value={formData.code}
                         onChange={handleChange}
                         required
+                        placeholder="סולסטארס-1234"
                     />
                 </div>
 
