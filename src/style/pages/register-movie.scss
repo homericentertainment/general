@@ -10,7 +10,8 @@
     button {
         @include button($color: $white, $bg: $red, $padding: 10px 20px, $border-radius: 4px, $font-size: 1.2rem);
         transition: all 0.3s ease;
-        min-width: 300px;
+        width: 100%;
+        max-width: 700px;
         margin-bottom: 10px;
     }
 

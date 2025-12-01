@@ -38,7 +38,7 @@ export default function RegisterMovie() {
         }
     }
 
-    const share = (openWhatsApp = false) => {
+    const share = () => {
         const message = `
 היי לכולם!
 הצטרפו אלי במופע הכי מטורף שהסולטיז עשו עד היום!
@@ -47,70 +47,60 @@ export default function RegisterMovie() {
 נתראה שם!`
         navigator.clipboard.writeText(message)
         dispatch(setUpperPopup('copied'))
-        if (openWhatsApp) window.open('whatsapp://app', "_self")
-    }
-
-    function isMobile() {
-        return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(
-            navigator.userAgent
-        )
     }
 
     if (submitted)
         return <div className="r-wrapper">
             <h1>הטופס נשלח בהצלחה!</h1>
             <p>שלח את הקישור לחברים, פנק אותם בהנחה ואולי תזכה להשתתף בסרט עם כוכבי הסולטיז!</p>
-            <button onClick={() => share(false)}>העתק לינק</button>
-            {isMobile() && <button style={{ backgroundColor: '#25D366' }} onClick={() => share(true)}>העתק ושתף בוואטסאפ</button>}
+            <button onClick={share}>העתק לינק</button>
         </div>
 
-    return (
-        <div className="r-wrapper">
-            <h1>הרשמה לסולטיז הסרט</h1>
-            <form className="user-form" onSubmit={handleSubmit}>
-                <p>נשתמש בפרטים אלו ליצור איתך קשר במידה וזכית.</p>
-                <div className="form-field">
-                    <label htmlFor="name">שם מלא</label>
-                    <input
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        placeholder="שם מלא"
-                    />
-                </div>
+    return <div className="r-wrapper">
+        <h1>הרשמה לסולטיז הסרט</h1>
+        <form className="user-form" onSubmit={handleSubmit}>
+            <p>נשתמש בפרטים אלו ליצור איתך קשר במידה וזכית.</p>
+            <div className="form-field">
+                <label htmlFor="name">שם מלא</label>
+                <input
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    placeholder="שם מלא"
+                />
+            </div>
 
-                <div className="form-field">
-                    <label htmlFor="phone">טלפון</label>
-                    <input
-                        id="phone"
-                        name="phone"
-                        type="tel"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        required
-                        placeholder="0501234567"
-                    />
-                </div>
+            <div className="form-field">
+                <label htmlFor="phone">טלפון</label>
+                <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                    placeholder="0501234567"
+                />
+            </div>
 
-                <div className="form-field">
-                    <label htmlFor="code">קוד על הפלייר</label>
-                    <input
-                        id="code"
-                        name="code"
-                        value={formData.code}
-                        onChange={handleChange}
-                        required
-                        placeholder="סולסטארס1234"
-                    />
-                </div>
+            <div className="form-field">
+                <label htmlFor="code">קוד על הפלייר</label>
+                <input
+                    id="code"
+                    name="code"
+                    value={formData.code}
+                    onChange={handleChange}
+                    required
+                    placeholder="סולסטארס1234"
+                />
+            </div>
 
-                <p className="policy-link">שליחת המידע מהווה הסכמה <span onClick={() => window.open('https://policies.thesaltiz.com/movie', '_blank')}>לתקנון</span></p>
-                <button type="submit" className="submit-btn">
-                    שליחה
-                </button>
-            </form>
-        </div>
-    )
+            <p className="policy-link">שליחת המידע מהווה הסכמה <span onClick={() => window.open('https://policies.thesaltiz.com/movie', '_blank')}>לתקנון</span></p>
+            <button type="submit" className="submit-btn">
+                שליחה
+            </button>
+        </form>
+    </div>
 }
