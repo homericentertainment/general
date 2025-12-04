@@ -28,7 +28,7 @@ export default function RegisterMovie() {
         try {
             if (formData.name.length > 20) return alert("שם מלא חובה וצריך להכיל עד 20 תווים")
             if (formData.phone.length !== 10) return alert("טלפון חייב להכיל 10 ספרות")
-            if (formData.code.length > 14 || !formData.code.includes('סולסטארס')) return alert("קוד חייב להיות מורכב מהמילה סולסטארס ומספר אחריו, למשל סולסטארס 1234")
+            if (formData.code.length > 14 || !formData.code.includes('סולסטארס')) return alert("קוד חייב להיות מורכב מהמילה סולסטארס ומספר אחריו, למשל  סולסטארס1234")
             await server.post('handle-movie/register', formData)
             setSubmitted(true)
         }
