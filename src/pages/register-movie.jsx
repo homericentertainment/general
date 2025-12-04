@@ -33,7 +33,8 @@ export default function RegisterMovie() {
             setSubmitted(true)
         }
         catch (error) {
-            alert("שגיאה בשליחת הטופס, אנא נסו שנית מאוחר יותר")
+            if (error.status === 401) return alert("הקוד כבר קיים במערכת, אנא קחו פלייר חדש")
+            else alert("שגיאה בשליחת הטופס, אנא נסו שנית מאוחר יותר")
             console.error(error)
         }
     }
