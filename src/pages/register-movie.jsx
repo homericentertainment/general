@@ -25,6 +25,7 @@ export default function RegisterMovie() {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+        document.body.style.zoom = '1'
         try {
             if (formData.name.length > 20) return alert("שם מלא חובה וצריך להכיל עד 20 תווים")
             if (formData.phone.length !== 10) return alert("טלפון חייב להכיל 10 ספרות")
@@ -53,15 +54,18 @@ export default function RegisterMovie() {
     if (submitted)
         return <div className="r-wrapper">
             <h1>הטופס נשלח בהצלחה!</h1>
-            <p style={{maxWidth:'700px'}}>אז איך זה עובד?
+            <p style={{ maxWidth: '700px' }}>איך זה עובד? 🎉</p>
+            <p>
                 ‏‎כל הזמנה = נקודה אחת.
-                ‏‎גם אתה יכול להזמין דרך הקישור והקוד שלך (30 ש״ח הנחה לכרטיס) – וזה כבר נותן נקודה ראשונה. ✔️
+                ‏‎גם אתה יכול להזמין דרך הקישור והקוד שלך (30 ש״ח הנחה לכרטיס) – וזה כבר נותן נקודה ראשונה. ✅
+            </p>
+            <p>
                 ‏‎כל חבר שקונה כרטיס דרך הקישור והקוד שלך מוסיף עוד נקודה.
                 ‏‎כשמגיעים ל־10 נקודות (10 הזמנות שונות) –
                 ‏‎אתה מקבל את כל הכרטיסים אליך. 🎬🔥
-
                 ‏‎ואז אתה שולח אותם לחברים שהזמינו עם הקישור שלך –
-                ‏‎וככה אתם כולכם הולכים ביחד לסרט של הסולטיז! 🚀❤️</p>
+                ‏‎וככה אתם כולכם הולכים ביחד להקרנה פרטית של הסרט ביחד עם הסולטיז! 🚀❤️
+            </p>
             <button onClick={share}>העתק לינק</button>
         </div>
 
