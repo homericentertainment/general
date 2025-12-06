@@ -26,6 +26,9 @@ export default function RegisterMovie() {
     const handleSubmit = async (e) => {
         e.preventDefault()
         document.body.style.zoom = '1'
+        const metaViewport = document.querySelector('meta[name="viewport"]')
+        if (metaViewport) metaViewport.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+
         try {
             if (formData.name.length > 20) return alert("שם מלא חובה וצריך להכיל עד 20 תווים")
             if (formData.phone.length !== 10) return alert("טלפון חייב להכיל 10 ספרות")
