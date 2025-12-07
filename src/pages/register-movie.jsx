@@ -50,10 +50,8 @@ export default function RegisterMovie() {
 לינק לקניית כרטיסים: https://discover.ticketmaster.co.il/event/sol25
 
 קוד הנחה : ${formData.code}
+*אם נגיע ל־10 הזמנות עם הקוד המשותף שלנו – כולנו הולכים ביחד להקרנה פרטית של סולטיז – הסרט בקיץ!! 🎬🔥אנחנו באולם סגור עם הסולטיז 😍🚀*`
 
-אם נגיע ל־10 הזמנות עם הקוד המשותף שלנו – כולנו הולכים ביחד להקרנה פרטית של סולטיז – הסרט בקיץ!! 🎬🔥 
-‎
-אנחנו באולם סגור עם הסולטיז 😍🚀`
         navigator.clipboard.writeText(message)
         dispatch(setUpperPopup('copied'))
     }
